@@ -1,0 +1,464 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;   
+}
+
+body{
+    font-family: 'Poppins';
+    /* overflow-x: hidden; */
+}
+
+img{
+    width: 100%;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    padding: 5px 30px;
+    background-color: rgb(2, 56, 2);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 35;
+}
+
+
+nav .logo a{
+    color: white;
+    font-weight: bold;
+    font-size: bold;
+    font-style: italic;
+}
+
+.navigation-list{
+    width: 40%;
+}
+
+nav .navigation-list ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+}
+
+nav .navigation-list li{
+    transition: .5s;
+}
+
+.navigation-list a{
+    text-decoration: none;
+    color: white;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+.navigation-list li:hover{
+    transform:translateY(-5px);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    display: none;
+}
+
+.menu-toggle span{
+    height: 3px;
+    width: 28px;
+    background-color: white;
+    transition: all 1s;
+}
+
+.menu-toggle input{
+    position: absolute;
+    width: 32px;
+    height: 25px;
+    left: -2px;
+    top: -1px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 1;
+}
+
+.menu-toggle span:nth-child(2){
+    transform-origin: 0 0;
+}
+.menu-toggle span:nth-child(4){
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2){
+    transform: rotate(39deg);
+}
+.menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+}
+
+.menu-toggle input:checked ~ span:nth-child(4){
+    transform: rotate(-39deg);
+}
+
+/* BAGIAN CONTENT */
+.content{
+    width: 100%;
+    background-color: rgb(2, 56, 2);
+    margin: 0 auto;
+    display: flex;
+    padding: 50px;
+    align-items: center;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.content-text{
+    width: 30%;
+}
+
+.content-text > h1{
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.content-img img{
+    border-radius: 5px;
+}
+
+.img-1{
+    transform: scale(1.5);
+}
+
+section h1,h4{
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+.content-text div:nth-child(3){
+    height: 5px;
+    width: 154px;
+    background-color: black;
+    border-radius: 5px;
+    margin-bottom: 24px;
+}
+
+section{
+    width: 80%;
+    margin: auto;
+}
+
+#about{
+    color: rgb(2, 56, 2);   
+    margin: 80px auto;
+    text-align: center;
+}
+
+.cards-list{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 35px;
+}
+
+#about .box-img{
+    width: 300px;
+    border: 1px solid black;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    height: 310px;
+    box-shadow: -2px 2px 3px black;
+    transition: 1s;
+}
+
+#about .box-img:hover{
+    transform: translateY(-15px);
+    box-shadow: 0 10px 9px rgb(29, 26, 26);
+}
+
+.card-img>img{
+    width: 20%;
+}
+
+.card-body>h4{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.1em;
+}
+
+.card-body>p{
+    font-weight: 700;
+}
+
+#recent > .text-recent{
+    text-align: center;
+    width: 35%;
+    margin: auto;
+    color: rgb(2, 56, 2);
+}
+
+#recent button a{
+    color:rgb(2, 56, 2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#recent button a:hover{
+    text-decoration: underline;
+}
+
+#recent button{
+    width: 173px;
+    padding: 15px;
+    border-radius: 25px;
+    border: none;
+    box-shadow: 3px 3px 9px #ddd;
+    margin-top: 35px;
+}
+
+.card-recent{
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 86px auto;
+    gap: 50px;
+}
+
+.card-recent img{
+    width: 40%;     
+    box-shadow: -3px 5px 5px black;
+}
+
+.card-recent h3{
+    font-weight: bold;
+    font-style: italic;
+}
+
+#contact{
+    width: 100%;
+    background-image:url(img/kendal-hnysCJrPpkc-unsplash.jpg);
+    height: 500px;
+    background-position:center;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#contact .text-foot{
+    width: 25%;
+    color: white;
+    text-align: center;
+    margin: auto;
+}
+#contact .text-foot h3{
+    font-weight: bold;
+    font-style: italic;
+}
+
+#contact .text-foot p{
+    font-size: .9em;
+    font-style: italic;
+}
+
+#contact .email-foot>div:nth-child(2){
+    height: 3px;
+    width: cover;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.icon-panah{
+    display:flex;
+    position: relative;
+}
+
+.icon-panah a{
+    color: white;
+    position: absolute;
+    right: -70px;
+    top: -45px;
+    animation: gerak 1s infinite;
+}
+
+@keyframes gerak {
+    0%{
+        transform: translateX(0);
+    }50%{
+        transform: translateX(15px)
+    }100%{
+        transform: translateX(0)
+    }
+}
+
+.icon-panah a:hover{
+    color: green;
+}
+
+.text-foot svg:nth-child(3){
+    display: none;
+}
+
+
+footer{
+    width: 100%;    
+    background-color: #012307;
+    padding: 20px;
+}
+
+footer .item-contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+footer h3{
+    color: white;
+    text-decoration: underline;
+    font-style: italic;
+    font-size: 1.3em;
+    font-weight: 100;
+}
+
+footer .item-contact a{
+    color: white;
+    text-decoration: none;
+}
+
+footer .icon{
+    transition: .5s;
+}
+
+footer .icon:hover{
+    color: white;
+    text-decoration: underline;
+    transform: translateY(-15px);
+}
+
+footer .item-contact .email{
+    display: none;
+}
+
+footer .akhir{
+    text-align: center;
+    font-size: 18px;
+    color: white;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 32px;
+}
+
+.akhir >div{
+    height:2px;
+    width: 60%;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+/* UKURAN HP */
+@media(max-width: 576px){
+    nav .menu-toggle{
+        display: flex;
+    }
+     
+    nav .menu-toggle span{
+        border-radius: 51px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        height: 50vh;
+        position: absolute;
+        right: 0;
+        align-items: center;
+        padding: 15px;
+        top: 50px;
+        transform: translateX(130%);
+        transition: 1s;
+        width: 60%;
+        background-color: rgb(2, 56, 2);
+        border-radius: 6px;
+    }
+
+    .slide{
+        transform: translateX(0);
+    }
+
+    #about .cards-list{
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    #recent > .text-recent{
+        width: 100%;
+        margin: auto;
+    }
+    
+    .content-text{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        font-size: 15px;
+        text-align: center;
+    }
+
+    .content-img{
+        display: none;
+    }
+
+    .card-recent img{
+        width: 30%;
+        transform: scale(1.6);
+    }
+
+    #recent .card-recent{
+        width: 100%;
+    }
+
+    
+    #contact .text-foot{
+        width: 100%;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        margin: auto;
+        font-weight: 300;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-foot svg:nth-child(3){
+        display: block;
+    }
+
+    .email-foot{
+        display:none;
+    }
+
+    footer .item-contact{
+        margin: 15px 0 -18px 0;
+    }
+
+    footer .item-contact .email{
+        display: block;
+    }
+
+    footer span{
+        display: none;
+    }
+
+}
